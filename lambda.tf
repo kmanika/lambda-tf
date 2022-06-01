@@ -24,6 +24,6 @@ resource "aws_lambda_function" "tf_lambda_function" {
   role = aws_iam_role.lambda_role.arn
   filename = "./hello-python.zip"
   handler = "index.lambda_handler"
-  runtime = "python3.9"
+  runtime = "python3.8"
   depends_on = [aws_iam_role_policy_attachment.lambda_attach_policy]
 }
